@@ -16,6 +16,14 @@ then the following headers would be added
 Authorization   : Bearer 13ca678d2aa8454599678e792266ea96
 ```
 
+## Install
+
+Install luarocks and run the following command
+
+```
+luarocks install kong-plugin-cookies-to-headers
+```
+
 ## Configuration
 
 Configuring the plugin is straightforward, you can add it on top of an API by executing the following request on your Kong server:

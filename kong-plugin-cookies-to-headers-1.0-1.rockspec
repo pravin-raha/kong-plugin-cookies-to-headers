@@ -6,7 +6,7 @@ source = {
 }
 description = {
   summary = "A Kong plugin that will convert cookies into headers",
-  license = "MIT"
+  license = "Apache 2.0"
 }
 dependencies = {
   "lua ~> 5.1",

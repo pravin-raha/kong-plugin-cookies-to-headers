@@ -18,6 +18,6 @@ function CookieToHeaders:access(plugin_conf)
     end
 end
 
-CookieToHeaders.PRIORITY = 1001
+CookieToHeaders.PRIORITY = 1010
 
 return CookieToHeaders

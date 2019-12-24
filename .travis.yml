@@ -7,7 +7,7 @@ env:
 before_install:
   - sudo apt-get update
   - sudo apt-get install -y libssl-dev luarocks
-  - sudo install busted kong
+  - sudo luarocks install busted kong
 
 jobs:
   include:

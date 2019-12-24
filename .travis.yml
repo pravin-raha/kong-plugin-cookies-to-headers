@@ -14,3 +14,5 @@ jobs:
   include:
     - env: BUID="Plugin Build"
       script: sudo luarocks make --pack-binary-rock
+    - env: BUID="TEST"
+      script: busted spec/ 

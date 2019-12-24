@@ -1,0 +1,18 @@
+language: python
+sudo: false
+
+env:
+  - LUA="lua=5.1"	
+  
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y libssl-dev luarocks
+  - sudo luarocks install busted
+  - sudo luarocks install kong
+
+jobs:
+  include:
+    - env: BUID="Plugin Build"
+      script: sudo luarocks make --pack-binary-rock
+    - env: BUID="TEST"
+      script: busted spec/ 

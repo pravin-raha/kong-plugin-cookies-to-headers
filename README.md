@@ -5,14 +5,14 @@ A Kong plugin that will add Authorization header from cookie.
 
 When enabled, this plugin will add new headers to requests based on set cookie. For example, if the cookie value is set like this
 
-```
+```ini
 name=value
 oauthtoken=13ca678d2aa8454599678e792266ea96
 ```
 
 then the following headers would be added
 
-```
+```http
 Authorization   : Bearer 13ca678d2aa8454599678e792266ea96
 ```
 
@@ -20,7 +20,7 @@ Authorization   : Bearer 13ca678d2aa8454599678e792266ea96
 
 Install luarocks and run the following command
 
-```
+```bash
 luarocks install kong-plugin-cookies-to-headers
 ```
 
@@ -33,11 +33,11 @@ curl -X POST http://localhost:8001/apis/{api_id}/plugins \
 --data "name=cookies-to-headers" \
 --data "config.cookie_name=cookieName"
 ```
-|Form Parameter | Required   | Description                                                                  |
-|---------------|------------|------------------------------------------------------------------------------|
-| `name`        | *required* |The name of the plugin to use, in this case: `cookies-to-headers`             |
-| `cookie_name` | *optional* |The name of the cookie which you want to convert into Authorization header    |
-
+| Form Parameter | Required   | Description                                                                                                 |
+|----------------|------------|-------------------------------------------------------------------------------------------------------------|
+| `name`         | *required* | The name of the plugin to use, in this case: `cookies-to-headers`                                           |
+| `cookie_name`  | *optional* | The name of the cookie which you want to convert into Authorization header                                  |
+| `header_name`  | *optional* | The name of the header to be injected instead of the default `Authorization` header, like `X-JWT-Assertion` |
 
 ## License
 

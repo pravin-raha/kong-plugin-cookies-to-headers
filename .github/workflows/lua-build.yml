@@ -1,0 +1,27 @@
+name: lua-build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - uses: leafo/gh-actions-lua@v9
+        with:
+          luaVersion: "5.1.5"
+      - uses: leafo/gh-actions-luarocks@v4
+
+      - name: build
+        run: |
+          luarocks install busted
+          luarocks make
+
+      - name: test
+        run: |
+          busted -o utfTerminal

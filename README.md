@@ -41,7 +41,7 @@ curl -X POST http://localhost:8001/apis/{api_id}/plugins \
 
 ## License
 
-Copyright 2017 Pravin Rahangdale
+Copyright 2022 Pravin Rahangdale
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

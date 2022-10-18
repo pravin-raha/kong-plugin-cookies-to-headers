@@ -22,6 +22,6 @@ jobs:
           luarocks install busted
           luarocks make
 
-      - name: test
-        run: |
-          busted -o utfTerminal
+#      - name: test
+#        run: |
+#          busted -o utfTerminal

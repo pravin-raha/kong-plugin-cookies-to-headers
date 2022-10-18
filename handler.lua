@@ -1,6 +1,6 @@
 local CookieToHeaders = {
     PRIORITY = 1010,
-    VERSION = "1.1-2",
+    VERSION = "1.1-3",
 }
 
 function CookieToHeaders:access(plugin_conf)
